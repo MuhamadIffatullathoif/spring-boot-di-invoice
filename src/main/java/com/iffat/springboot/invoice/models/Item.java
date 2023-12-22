@@ -3,9 +3,7 @@ package com.iffat.springboot.invoice.models;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
 public class Item {
-    @Autowired
     private Product product;
     private Integer quantity;
 
@@ -31,5 +29,9 @@ public class Item {
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+    public double getAmount() {
+        return product.getPrice() * quantity;
     }
 }

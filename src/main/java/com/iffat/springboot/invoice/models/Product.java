@@ -2,7 +2,6 @@ package com.iffat.springboot.invoice.models;
 
 import org.springframework.stereotype.Component;
 
-@Component
 public class Product {
     private String name;
     private Double price;
