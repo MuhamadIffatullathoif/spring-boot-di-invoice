@@ -15,8 +15,8 @@ public class AppConfig {
 
     @Bean
     List<Item> items() {
-        Product product = new Product("Mouse",50d);
-        Product product1 = new Product("Keyboard", 100d);
+        Product product = new Product("Mouse",50);
+        Product product1 = new Product("Keyboard", 100);
         return Arrays.asList(new Item(product, 2), new Item(product1, 4));
     }
 }

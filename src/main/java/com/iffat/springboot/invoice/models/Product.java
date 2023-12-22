@@ -4,12 +4,12 @@ import org.springframework.stereotype.Component;
 
 public class Product {
     private String name;
-    private Double price;
+    private Integer price;
 
     public Product() {
     }
 
-    public Product(String name, Double price) {
+    public Product(String name, Integer price) {
         this.name = name;
         this.price = price;
     }
@@ -22,11 +22,11 @@ public class Product {
         this.name = name;
     }
 
-    public Double getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 }

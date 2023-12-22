@@ -31,7 +31,7 @@ public class Item {
         this.quantity = quantity;
     }
 
-    public double getAmount() {
+    public int getAmount() {
         return product.getPrice() * quantity;
     }
 }
