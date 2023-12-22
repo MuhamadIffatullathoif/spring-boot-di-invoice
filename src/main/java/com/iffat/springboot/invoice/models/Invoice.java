@@ -1,5 +1,6 @@
 package com.iffat.springboot.invoice.models;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,6 +20,11 @@ public class Invoice {
     @Autowired
     @Qualifier("default")
     private List<Item> items;
+
+    @PostConstruct
+    public void init() {
+        client.setLastname(client.getLastname().concat(" Lathoif"));
+    }
 
     public Client getClient() {
         return client;
