@@ -1,6 +1,7 @@
 package com.iffat.springboot.invoice.models;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,6 +25,11 @@ public class Invoice {
     @PostConstruct
     public void init() {
         client.setLastname(client.getLastname().concat(" Lathoif"));
+    }
+
+    @PreDestroy
+    public void destroy(){
+        System.out.println("Will called when Destroy component bean invoice");
     }
 
     public Client getClient() {
